@@ -1,0 +1,1270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>MYSQL¸´Ï°±¦µä.html</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 15px 18px 15px 18px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'ËÎÌå';
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+a.rvts1, span.rvts1 /* Hyperlink */
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts2
+{
+ font-size: 9pt;
+}
+a.rvts3, span.rvts3
+{
+ font-size: 9pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts4
+{
+}
+span.rvts5
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts6
+{
+ font-weight: bold;
+}
+span.rvts7
+{
+ font-weight: bold;
+ color: #ff0000;
+}
+a.rvts8, span.rvts8
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts8:hover { color: #0000ff; }
+span.rvts9
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts10
+{
+ color: #ff0000;
+}
+span.rvts11
+{
+ color: #0000ff;
+}
+span.rvts12
+{
+ color: ;
+}
+span.rvts13
+{
+ font-weight: bold;
+ color: #00ff00;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+ text-indent: 28px;
+ line-height: 1.50;
+ margin: 5px 0px 5px 0px;
+}
+.rvps3
+{
+ text-align: center;
+ text-indent: 28px;
+ line-height: 1.50;
+ margin: 5px 0px 5px 0px;
+}
+.rvps4
+{
+ line-height: 1.50;
+ margin: 5px 0px 5px 0px;
+}
+.rvps5
+{
+ line-height: 1.50;
+ margin: 0px 0px 5px 0px;
+}
+.rvps6
+{
+ line-height: 1.50;
+}
+.rvps7
+{
+ text-indent: 30px;
+ line-height: 1.50;
+ margin: 5px 0px 5px 0px;
+}
+--></style>
+</head>
+<body>
+<p class=rvps3><span class=rvts5>DDL&#35821;&#35328;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>DML&#35821;&#35328;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>DQL&#35821;&#35328;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>MySQL</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>MySQL&#30340;&#20171;&#32461;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;MySQL&#30340;&#32972;&#26223;</span></p>
+<p class=rvps2><span class=rvts4>&#21069;&#36523;&#23646;&#20110;&#29790;&#20856;&#30340;&#19968;&#23478;&#20844;&#21496;&#65292;MySQL AB</span></p>
+<p class=rvps2><span class=rvts4>08&#24180;&#34987;sun&#20844;&#21496;&#25910;&#36141;</span></p>
+<p class=rvps2><span class=rvts4>09&#24180;sun&#34987;oracle&#25910;&#36141;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;MySQL&#30340;&#20248;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#24320;&#28304;&#12289;&#20813;&#36153;&#12289;&#25104;&#26412;&#20302;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#24615;&#33021;&#39640;&#12289;&#31227;&#26893;&#24615;&#20063;&#22909;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#20307;&#31215;&#23567;&#65292;&#20415;&#20110;&#23433;&#35013;</span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;MySQL&#30340;&#23433;&#35013;</span></p>
+<p class=rvps2><span class=rvts6>&#23646;&#20110;c/s&#26550;&#26500;&#30340;&#36719;&#20214;&#65292;&#19968;&#33324;&#26469;&#35762;&#23433;&#35013;&#26381;&#21153;&#31471;</span></p>
+<p class=rvps2><span class=rvts6>&#20225;&#19994;&#29256;</span></p>
+<p class=rvps2><span class=rvts6>&#31038;&#21306;&#29256;</span></p>
+<p class=rvps2><span class=rvts7><br></span></p>
+<p class=rvps2><span class=rvts7>5.5</span></p>
+<p class=rvps2><span class=rvts6>5.6</span></p>
+<p class=rvps2><span class=rvts6>5.7</span></p>
+<p class=rvps2><span class=rvts6>8.0</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;MySQL&#26381;&#21153;&#30340;&#21551;&#21160;&#21644;&#20572;&#27490;</span></p>
+<p class=rvps2><span class=rvts6>&#26041;&#24335;&#19968;&#65306;&#36890;&#36807;&#21629;&#20196;&#34892;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>net start &#26381;&#21153;&#21517;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>net stop &#26381;&#21153;&#21517;</span></p>
+<p class=rvps2><span class=rvts6>&#26041;&#24335;&#20108;&#65306;&#35745;&#31639;&#26426;&#8212;&#8212;&#21491;&#20987;&#8212;&#8212;&#31649;&#29702;&#8212;&#8212;&#26381;&#21153;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20116;&#12289;MySQL&#26381;&#21153;&#30340;&#30331;&#24405;&#21644;&#36864;&#20986;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#30331;&#24405;&#65306;mysql &#12304;-h &#20027;&#26426;&#21517; -P &#31471;&#21475;&#21495;&#12305; -u &#29992;&#25143;&#21517; -p&#23494;&#30721;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#36864;&#20986;&#65306;exit&#25110;ctrl+C</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>TCL&#35821;&#35328;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#20998;&#31867;</span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#31995;&#32479;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#35828;&#26126;&#65306;</span><span class=rvts4>&#21464;&#37327;&#30001;&#31995;&#32479;&#25552;&#20379;&#30340;&#65292;&#19981;&#29992;&#33258;&#23450;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#26597;&#30475;&#31995;&#32479;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts4>show &#12304;global|session &#12305;variables like ''; &#22914;&#26524;&#27809;&#26377;&#26174;&#24335;&#22768;&#26126;global&#36824;&#26159;session&#65292;&#21017;&#40664;&#35748;&#26159;session</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#26597;&#30475;&#25351;&#23450;&#30340;&#31995;&#32479;&#21464;&#37327;&#30340;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>select </span><span class=rvts8>@@&#12304;global|session&#12305;.&#21464;&#37327;&#21517;</span><span class=rvts4>; &#22914;&#26524;&#27809;&#26377;&#26174;&#24335;&#22768;&#26126;global&#36824;&#26159;session&#65292;&#21017;&#40664;&#35748;&#26159;session</span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#20026;&#31995;&#32479;&#21464;&#37327;&#36171;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#19968;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>set &#12304;global|session &#12305; &#21464;&#37327;&#21517;=&#20540;; &#22914;&#26524;&#27809;&#26377;&#26174;&#24335;&#22768;&#26126;global&#36824;&#26159;session&#65292;&#21017;&#40664;&#35748;&#26159;session</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#20108;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>set </span><span class=rvts8>@@global.&#21464;&#37327;&#21517;=&#20540;</span><span class=rvts4>;</span></p>
+<p class=rvps2><span class=rvts4>set @@&#21464;&#37327;&#21517;=&#20540;&#65307;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#20840;&#23616;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#26381;&#21153;&#22120;&#23618;&#38754;&#19978;&#30340;&#65292;&#24517;&#39035;&#25317;&#26377;super&#26435;&#38480;&#25165;&#33021;&#20026;&#31995;&#32479;&#21464;&#37327;&#36171;&#20540;&#65292;&#20316;&#29992;&#22495;&#20026;&#25972;&#20010;&#26381;&#21153;&#22120;&#65292;&#20063;&#23601;&#26159;&#38024;&#23545;&#20110;&#25152;&#26377;&#36830;&#25509;&#65288;&#20250;&#35805;&#65289;&#26377;&#25928;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#20250;&#35805;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#26381;&#21153;&#22120;&#20026;&#27599;&#19968;&#20010;&#36830;&#25509;&#30340;&#23458;&#25143;&#31471;&#37117;&#25552;&#20379;&#20102;&#31995;&#32479;&#21464;&#37327;&#65292;&#20316;&#29992;&#22495;&#20026;&#24403;&#21069;&#30340;&#36830;&#25509;&#65288;&#20250;&#35805;&#65289;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#33258;&#23450;&#20041;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#35828;&#26126;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#29992;&#25143;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#20316;&#29992;&#22495;&#65306;&#38024;&#23545;&#20110;&#24403;&#21069;&#36830;&#25509;&#65288;&#20250;&#35805;&#65289;&#29983;&#25928;</span></p>
+<p class=rvps2><span class=rvts6>&#20301;&#32622;&#65306;begin end&#37324;&#38754;&#65292;&#20063;&#21487;&#20197;&#25918;&#22312;&#22806;&#38754;</span></p>
+<p class=rvps2><span class=rvts6>&#20351;&#29992;&#65306;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#9312;&#22768;&#26126;&#24182;&#36171;&#20540;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>set @&#21464;&#37327;&#21517;=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4>set @&#21464;&#37327;&#21517;:=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4>select @&#21464;&#37327;&#21517;:=&#20540;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#26356;&#26032;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#19968;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>set @&#21464;&#37327;&#21517;=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>set @&#21464;&#37327;&#21517;:=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select @&#21464;&#37327;&#21517;:=&#20540;;</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#20108;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select xx into @&#21464;&#37327;&#21517; from &#34920;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts4>select @&#21464;&#37327;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#23616;&#37096;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts6>&#20316;&#29992;&#22495;&#65306;&#20165;&#20165;&#22312;&#23450;&#20041;&#23427;&#30340;begin end&#20013;&#26377;&#25928;</span></p>
+<p class=rvps2><span class=rvts6>&#20301;&#32622;&#65306;&#21482;&#33021;&#25918;&#22312;begin end&#20013;&#65292;&#32780;&#19988;&#21482;&#33021;&#25918;&#22312;&#31532;&#19968;&#21477;</span></p>
+<p class=rvps2><span class=rvts6>&#20351;&#29992;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#9312;&#22768;&#26126;</span></p>
+<p class=rvps2><span class=rvts6>declare &#21464;&#37327;&#21517; &#31867;&#22411; &#12304;default &#20540;&#12305;;</span></p>
+<p class=rvps2><span class=rvts6>&#9313;&#36171;&#20540;&#25110;&#26356;&#26032;</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#19968;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>set &#21464;&#37327;&#21517;=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>set &#21464;&#37327;&#21517;:=&#20540;;&#25110;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select @&#21464;&#37327;&#21517;:=&#20540;;</span></p>
+<p class=rvps2><span class=rvts4>&#26041;&#24335;&#20108;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select xx into &#21464;&#37327;&#21517; from &#34920;;</span></p>
+<p class=rvps2><span class=rvts6>&#9314;&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts6>select &#21464;&#37327;&#21517;;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#34920;&#30340;&#31649;&#29702;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21019;&#24314;&#34920; &#9733;</span></p>
+<p class=rvps2><span class=rvts6>create table &#12304;if not exists&#12305; &#34920;&#21517;(</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#12304;&#32422;&#26463;&#12305;,</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#12304;&#32422;&#26463;&#12305;,</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#12290;&#12290;&#12290;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#12304;&#32422;&#26463;&#12305; </span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>)</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#20462;&#25913;&#34920;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6>1.&#28155;&#21152;&#21015;</span></p>
+<p class=rvps7><span class=rvts6>alter table &#34920;&#21517; add column &#21015;&#21517; &#31867;&#22411; &#12304;first|after &#23383;&#27573;&#21517;&#12305;;</span></p>
+<p class=rvps7><span class=rvts6>2.&#20462;&#25913;&#21015;&#30340;&#31867;&#22411;&#25110;&#32422;&#26463;</span></p>
+<p class=rvps7><span class=rvts6>alter table &#34920;&#21517; modify column &#21015;&#21517; &#26032;&#31867;&#22411; &#12304;&#26032;&#32422;&#26463;&#12305;;</span></p>
+<p class=rvps7><span class=rvts6>3.&#20462;&#25913;&#21015;&#21517;</span></p>
+<p class=rvps7><span class=rvts6>alter table &#34920;&#21517; change column &#26087;&#21015;&#21517; &#26032;&#21015;&#21517; &#31867;&#22411;;</span></p>
+<p class=rvps7><span class=rvts6>4 .&#21024;&#38500;&#21015;</span></p>
+<p class=rvps7><span class=rvts6>alter table &#34920;&#21517; drop column &#21015;&#21517;;</span></p>
+<p class=rvps7><span class=rvts6>5.&#20462;&#25913;&#34920;&#21517;</span></p>
+<p class=rvps7><span class=rvts6>alter table &#34920;&#21517; rename &#12304;to&#12305; &#26032;&#34920;&#21517;;</span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6>&#19977;&#12289;&#21024;&#38500;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>drop table&#12304;if exists&#12305; &#34920;&#21517;;</span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6>&#22235;&#12289;&#22797;&#21046;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>1&#12289;&#22797;&#21046;&#34920;&#30340;&#32467;&#26500;</span></p>
+<p class=rvps7><span class=rvts6>create table &#34920;&#21517; like &#26087;&#34920;;</span></p>
+<p class=rvps7><span class=rvts6>2&#12289;&#22797;&#21046;&#34920;&#30340;&#32467;&#26500;+&#25968;&#25454;</span></p>
+<p class=rvps7><span class=rvts6>create table &#34920;&#21517; </span></p>
+<p class=rvps7><span class=rvts6>select &#26597;&#35810;&#21015;&#34920; from &#26087;&#34920;&#12304;where &#31579;&#36873;&#12305;;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#25554;&#20837;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#26041;&#24335;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>insert into &#34920;&#21517;(&#23383;&#27573;&#21517;,...) values(&#20540;,...);</span></p>
+<p class=rvps2><span class=rvts4>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#35201;&#27714;&#20540;&#30340;&#31867;&#22411;&#21644;&#23383;&#27573;&#30340;&#31867;&#22411;&#35201;&#19968;&#33268;&#25110;&#20860;&#23481;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#23383;&#27573;&#30340;&#20010;&#25968;&#21644;&#39034;&#24207;&#19981;&#19968;&#23450;&#19982;&#21407;&#22987;&#34920;&#20013;&#30340;&#23383;&#27573;&#20010;&#25968;&#21644;&#39034;&#24207;&#19968;&#33268;</span></p>
+<p class=rvps2><span class=rvts4>&#20294;&#24517;&#39035;&#20445;&#35777;&#20540;&#21644;&#23383;&#27573;&#19968;&#19968;&#23545;&#24212;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#20551;&#22914;&#34920;&#20013;&#26377;&#21487;&#20197;&#20026;null&#30340;&#23383;&#27573;&#65292;&#27880;&#24847;&#21487;&#20197;&#36890;&#36807;&#20197;&#19979;&#20004;&#31181;&#26041;&#24335;&#25554;&#20837;null&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#23383;&#27573;&#21644;&#20540;&#37117;&#30465;&#30053;</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#23383;&#27573;&#20889;&#19978;&#65292;&#20540;&#20351;&#29992;null</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#23383;&#27573;&#21644;&#20540;&#30340;&#20010;&#25968;&#24517;&#39035;&#19968;&#33268;</span></p>
+<p class=rvps2><span class=rvts4>5&#12289;&#23383;&#27573;&#21517;&#21487;&#20197;&#30465;&#30053;&#65292;&#40664;&#35748;&#25152;&#26377;&#21015;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#26041;&#24335;&#20108;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>insert into &#34920;&#21517; set &#23383;&#27573;=&#20540;,&#23383;&#27573;=&#20540;,...;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#20004;&#31181;&#26041;&#24335; &#30340;&#21306;&#21035;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1.&#26041;&#24335;&#19968;&#25903;&#25345;&#19968;&#27425;&#25554;&#20837;&#22810;&#34892;&#65292;&#35821;&#27861;&#22914;&#19979;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>insert into &#34920;&#21517;&#12304;(&#23383;&#27573;&#21517;,..)&#12305; values(&#20540;&#65292;..),(&#20540;&#65292;...),...;</span></p>
+<p class=rvps2><span class=rvts4>2.&#26041;&#24335;&#19968;&#25903;&#25345;&#23376;&#26597;&#35810;&#65292;&#35821;&#27861;&#22914;&#19979;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>insert into &#34920;&#21517;</span></p>
+<p class=rvps2><span class=rvts4>&#26597;&#35810;&#35821;&#21477;;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#26597;&#35810;&#24635;&#32467;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920; &nbsp; &nbsp;&#9318;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;1 &#21035;&#21517; &nbsp; &nbsp; &nbsp; &#9312;</span></p>
+<p class=rvps2><span class=rvts4>&#36830;&#25509;&#31867;&#22411; join &#34920;2 &nbsp; &#9313;</span></p>
+<p class=rvps2><span class=rvts4>on &#36830;&#25509;&#26465;&#20214; &nbsp; &nbsp; &nbsp; &nbsp; &#9314;</span></p>
+<p class=rvps2><span class=rvts4>where &#31579;&#36873; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#9315;</span></p>
+<p class=rvps2><span class=rvts4>group by &#20998;&#32452;&#21015;&#34920; &nbsp; &#9316;</span></p>
+<p class=rvps2><span class=rvts4>having &#31579;&#36873; &nbsp; &nbsp; &nbsp; &nbsp; &#9317;</span></p>
+<p class=rvps2><span class=rvts4>order by&#25490;&#24207;&#21015;&#34920; &nbsp; &nbsp;&#9319;</span></p>
+<p class=rvps2><span class=rvts4>limit &#36215;&#22987;&#26465;&#30446;&#32034;&#24341;&#65292;&#26465;&#30446;&#25968;; &nbsp;&#9320;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#24120;&#35265;&#30340;&#32422;&#26463;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#24120;&#35265;&#30340;&#32422;&#26463;</span></p>
+<p class=rvps2><span class=rvts4>NOT NULL&#65306;&#38750;&#31354;&#65292;&#35813;&#23383;&#27573;&#30340;&#20540;&#24517;&#22635;</span></p>
+<p class=rvps2><span class=rvts4>UNIQUE&#65306;&#21807;&#19968;&#65292;&#35813;&#23383;&#27573;&#30340;&#20540;&#19981;&#21487;&#37325;&#22797;</span></p>
+<p class=rvps2><span class=rvts4>DEFAULT&#65306;&#40664;&#35748;&#65292;&#35813;&#23383;&#27573;&#30340;&#20540;&#19981;&#29992;&#25163;&#21160;&#25554;&#20837;&#26377;&#40664;&#35748;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>CHECK&#65306;&#26816;&#26597;&#65292;mysql&#19981;&#25903;&#25345;</span></p>
+<p class=rvps2><span class=rvts4>PRIMARY KEY&#65306;&#20027;&#38190;&#65292;&#35813;&#23383;&#27573;&#30340;&#20540;&#19981;&#21487;&#37325;&#22797;&#24182;&#19988;&#38750;&#31354; &nbsp;unique+not null</span></p>
+<p class=rvps2><span class=rvts4>FOREIGN KEY&#65306;&#22806;&#38190;&#65292;&#35813;&#23383;&#27573;&#30340;&#20540;&#24341;&#29992;&#20102;&#21478;&#22806;&#30340;&#34920;&#30340;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#20027;&#38190;&#21644;&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#21306;&#21035;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#12289;&#19968;&#20010;&#34920;&#33267;&#22810;&#26377;&#19968;&#20010;&#20027;&#38190;&#65292;&#20294;&#21487;&#20197;&#26377;&#22810;&#20010;&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#12289;&#20027;&#38190;&#19981;&#20801;&#35768;&#20026;&#31354;&#65292;&#21807;&#19968;&#21487;&#20197;&#20026;&#31354;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#30456;&#21516;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>&#37117;&#20855;&#26377;&#21807;&#19968;&#24615;</span></p>
+<p class=rvps2><span class=rvts4>&#37117;&#25903;&#25345;&#32452;&#21512;&#38190;&#65292;&#20294;&#19981;&#25512;&#33616;</span></p>
+<p class=rvps2><span class=rvts6>&#22806;&#38190;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#29992;&#20110;&#38480;&#21046;&#20004;&#20010;&#34920;&#30340;&#20851;&#31995;&#65292;&#20174;&#34920;&#30340;&#23383;&#27573;&#20540;&#24341;&#29992;&#20102;&#20027;&#34920;&#30340;&#26576;&#23383;&#27573;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#22806;&#38190;&#21015;&#21644;&#20027;&#34920;&#30340;&#34987;&#24341;&#29992;&#21015;&#35201;&#27714;&#31867;&#22411;&#19968;&#33268;&#65292;&#24847;&#20041;&#19968;&#26679;&#65292;&#21517;&#31216;&#26080;&#35201;&#27714;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#20027;&#34920;&#30340;&#34987;&#24341;&#29992;&#21015;&#35201;&#27714;&#26159;&#19968;&#20010;key&#65288;&#19968;&#33324;&#23601;&#26159;&#20027;&#38190;&#65289;</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#25554;&#20837;&#25968;&#25454;&#65292;&#20808;&#25554;&#20837;&#20027;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#25968;&#25454;&#65292;&#20808;&#21024;&#38500;&#20174;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>&#21487;&#20197;&#36890;&#36807;&#20197;&#19979;&#20004;&#31181;&#26041;&#24335;&#26469;&#21024;&#38500;&#20027;&#34920;&#30340;&#35760;&#24405;</span></p>
+<p class=rvps2><span class=rvts4>#&#26041;&#24335;&#19968;&#65306;&#32423;&#32852;&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts4>ALTER TABLE stuinfo ADD CONSTRAINT fk_stu_major FOREIGN KEY(majorid) REFERENCES major(id) ON DELETE CASCADE;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>#&#26041;&#24335;&#20108;&#65306;&#32423;&#32852;&#32622;&#31354;</span></p>
+<p class=rvps2><span class=rvts4>ALTER TABLE stuinfo ADD CONSTRAINT fk_stu_major FOREIGN KEY(majorid) REFERENCES major(id) ON DELETE SET NULL;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#21019;&#24314;&#34920;&#26102;&#28155;&#21152;&#32422;&#26463;</span></p>
+<p class=rvps2><span class=rvts4>create table &#34920;&#21517;(</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; not null,#&#38750;&#31354;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; primary key,#&#20027;&#38190;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; unique,#&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; default &#20540;,#&#40664;&#35748;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>constraint &#32422;&#26463;&#21517; foreign key(&#23383;&#27573;&#21517;) references &#20027;&#34920;&#65288;&#34987;&#24341;&#29992;&#21015;&#65289;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>)</span></p>
+<p class=rvps2><span class=rvts4>&#27880;&#24847;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#25903;&#25345;&#31867;&#22411;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#21487;&#20197;&#36215;&#32422;&#26463;&#21517;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps2><span class=rvts4>&#21015;&#32423;&#32422;&#26463;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#38500;&#20102;&#22806;&#38190;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#19981;&#21487;&#20197;</span></p>
+<p class=rvps2><span class=rvts4>&#34920;&#32423;&#32422;&#26463;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#38500;&#20102;&#38750;&#31354;&#21644;&#40664;&#35748;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#21487;&#20197;&#65292;&#20294;&#23545;&#20027;&#38190;&#26080;&#25928;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#21015;&#32423;&#32422;&#26463;&#21487;&#20197;&#22312;&#19968;&#20010;&#23383;&#27573;&#19978;&#36861;&#21152;&#22810;&#20010;&#65292;&#20013;&#38388;&#29992;&#31354;&#26684;&#38548;&#24320;&#65292;&#27809;&#26377;&#39034;&#24207;&#35201;&#27714;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#20462;&#25913;&#34920;&#26102;&#28155;&#21152;&#25110;&#21024;&#38500;&#32422;&#26463;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#38750;&#31354;</span></p>
+<p class=rvps2><span class=rvts4>&#28155;&#21152;&#38750;&#31354;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; not null;</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#38750;&#31354;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; ;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#40664;&#35748;</span></p>
+<p class=rvps2><span class=rvts4>&#28155;&#21152;&#40664;&#35748;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; default &#20540;;</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#40664;&#35748;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; ;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#20027;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>&#28155;&#21152;&#20027;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; add&#12304; constraint &#32422;&#26463;&#21517;&#12305; primary key(&#23383;&#27573;&#21517;);</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#20027;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; drop primary key;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>&#28155;&#21152;&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; add&#12304; constraint &#32422;&#26463;&#21517;&#12305; unique(&#23383;&#27573;&#21517;);</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#21807;&#19968;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; drop index &#32034;&#24341;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>5&#12289;&#22806;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>&#28155;&#21152;&#22806;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; add&#12304; constraint &#32422;&#26463;&#21517;&#12305; foreign key(&#23383;&#27573;&#21517;) references &#20027;&#34920;&#65288;&#34987;&#24341;&#29992;&#21015;&#65289;;</span></p>
+<p class=rvps2><span class=rvts4>&#21024;&#38500;&#22806;&#38190;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920;&#21517; drop foreign key &#32422;&#26463;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;&#33258;&#22686;&#38271;&#21015;</span></p>
+<p class=rvps2><span class=rvts4>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#19981;&#29992;&#25163;&#21160;&#25554;&#20837;&#20540;&#65292;&#21487;&#20197;&#33258;&#21160;&#25552;&#20379;&#24207;&#21015;&#20540;&#65292;&#40664;&#35748;&#20174;1&#24320;&#22987;&#65292;&#27493;&#38271;&#20026;1</span></p>
+<p class=rvps2><span class=rvts4>auto_increment_increment</span></p>
+<p class=rvps2><span class=rvts4>&#22914;&#26524;&#35201;&#26356;&#25913;&#36215;&#22987;&#20540;&#65306;&#25163;&#21160;&#25554;&#20837;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#22914;&#26524;&#35201;&#26356;&#25913;&#27493;&#38271;&#65306;&#26356;&#25913;&#31995;&#32479;&#21464;&#37327;</span></p>
+<p class=rvps2><span class=rvts4>set auto_increment_increment=&#20540;;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#19968;&#20010;&#34920;&#33267;&#22810;&#26377;&#19968;&#20010;&#33258;&#22686;&#38271;&#21015;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#33258;&#22686;&#38271;&#21015;&#21482;&#33021;&#25903;&#25345;&#25968;&#20540;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#33258;&#22686;&#38271;&#21015;&#24517;&#39035;&#20026;&#19968;&#20010;key</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21019;&#24314;&#34920;&#26102;&#35774;&#32622;&#33258;&#22686;&#38271;&#21015;</span></p>
+<p class=rvps2><span class=rvts6>create table &#34920;(</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#32422;&#26463; </span><span class=rvts9>auto_increment</span></p>
+<p class=rvps2><span class=rvts6>)</span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#20462;&#25913;&#34920;&#26102;&#35774;&#32622;&#33258;&#22686;&#38271;&#21015;</span></p>
+<p class=rvps2><span class=rvts6>alter table &#34920; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#32422;&#26463; </span><span class=rvts9>auto_increment</span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#21024;&#38500;&#33258;&#22686;&#38271;&#21015;</span></p>
+<p class=rvps2><span class=rvts4>alter table &#34920; modify column &#23383;&#27573;&#21517; &#23383;&#27573;&#31867;&#22411; &#32422;&#26463; </span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#24120;&#35265;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#27010;&#36848;</span></p>
+<p class=rvps2><span class=rvts4>&#21151;&#33021;&#65306;&#31867;&#20284;&#20110;java&#20013;&#30340;&#26041;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>&#22909;&#22788;&#65306;&#25552;&#39640;&#37325;&#29992;&#24615;&#21644;&#38544;&#34255;&#23454;&#29616;&#32454;&#33410;</span></p>
+<p class=rvps2><span class=rvts4>&#35843;&#29992;&#65306;select &#20989;&#25968;&#21517;(&#23454;&#21442;&#21015;&#34920;);</span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#21333;&#34892;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#23383;&#31526;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>concat:&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts4>substr:&#25130;&#21462;&#23376;&#20018;</span></p>
+<p class=rvps2><span class=rvts4>upper:&#21464;&#22823;&#20889;</span></p>
+<p class=rvps2><span class=rvts4>lower&#65306;&#21464;&#23567;&#20889;</span></p>
+<p class=rvps2><span class=rvts4>replace&#65306;&#26367;&#25442;</span></p>
+<p class=rvps2><span class=rvts4>length&#65306;&#33719;&#21462;&#23383;&#33410;&#38271;&#24230;</span></p>
+<p class=rvps2><span class=rvts4>trim:&#21435;&#21069;&#21518;&#31354;&#26684;</span></p>
+<p class=rvps2><span class=rvts4>lpad&#65306;&#24038;&#22635;&#20805;</span></p>
+<p class=rvps2><span class=rvts4>rpad&#65306;&#21491;&#22635;&#20805;</span></p>
+<p class=rvps2><span class=rvts4>instr:&#33719;&#21462;&#23376;&#20018;&#31532;&#19968;&#27425;&#20986;&#29616;&#30340;&#32034;&#24341;</span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#25968;&#23398;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6>ceil:&#21521;&#19978;&#21462;&#25972;</span></p>
+<p class=rvps2><span class=rvts6>round&#65306;&#22235;&#33293;&#20116;&#20837;</span></p>
+<p class=rvps2><span class=rvts6>mod:&#21462;&#27169;</span></p>
+<p class=rvps2><span class=rvts6>floor&#65306;&#21521;&#19979;&#21462;&#25972;</span></p>
+<p class=rvps2><span class=rvts6>truncate:&#25130;&#26029;</span></p>
+<p class=rvps2><span class=rvts6>rand:&#33719;&#21462;&#38543;&#26426;&#25968;&#65292;&#36820;&#22238;0-1&#20043;&#38388;&#30340;&#23567;&#25968;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>3&#12289;&#26085;&#26399;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts4>now&#65306;&#36820;&#22238;&#24403;&#21069;&#26085;&#26399;+&#26102;&#38388;</span></p>
+<p class=rvps2><span class=rvts4>year:&#36820;&#22238;&#24180;</span></p>
+<p class=rvps2><span class=rvts4>month&#65306;&#36820;&#22238;&#26376;</span></p>
+<p class=rvps2><span class=rvts4>day:&#36820;&#22238;&#26085;</span></p>
+<p class=rvps2><span class=rvts4>date_format:&#23558;&#26085;&#26399;&#36716;&#25442;&#25104;&#23383;&#31526;</span></p>
+<p class=rvps2><span class=rvts4>curdate:&#36820;&#22238;&#24403;&#21069;&#26085;&#26399;</span></p>
+<p class=rvps2><span class=rvts4>str_to_date:&#23558;&#23383;&#31526;&#36716;&#25442;&#25104;&#26085;&#26399;</span></p>
+<p class=rvps2><span class=rvts4>curtime&#65306;&#36820;&#22238;&#24403;&#21069;&#26102;&#38388;</span></p>
+<p class=rvps2><span class=rvts4>hour:&#23567;&#26102;</span></p>
+<p class=rvps2><span class=rvts4>minute:&#20998;&#38047;</span></p>
+<p class=rvps2><span class=rvts4>second&#65306;&#31186;</span></p>
+<p class=rvps2><span class=rvts4>datediff:&#36820;&#22238;&#20004;&#20010;&#26085;&#26399;&#30456;&#24046;&#30340;&#22825;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>monthname:&#20197;&#33521;&#25991;&#24418;&#24335;&#36820;&#22238;&#26376;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>4&#12289;&#20854;&#20182;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>version &#24403;&#21069;&#25968;&#25454;&#24211;&#26381;&#21153;&#22120;&#30340;&#29256;&#26412;</span></p>
+<p class=rvps2><span class=rvts4>database &#24403;&#21069;&#25171;&#24320;&#30340;&#25968;&#25454;&#24211;</span></p>
+<p class=rvps2><span class=rvts4>user&#24403;&#21069;&#29992;&#25143;</span></p>
+<p class=rvps2><span class=rvts4>password('&#23383;&#31526;')&#65306;&#36820;&#22238;&#35813;&#23383;&#31526;&#30340;&#23494;&#30721;&#24418;&#24335;</span></p>
+<p class=rvps2><span class=rvts4>md5('&#23383;&#31526;'):&#36820;&#22238;&#35813;&#23383;&#31526;&#30340;md5&#21152;&#23494;&#24418;&#24335;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>5&#12289;&#27969;&#31243;&#25511;&#21046;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#9312;if(&#26465;&#20214;&#34920;&#36798;&#24335;&#65292;&#34920;&#36798;&#24335;1&#65292;&#34920;&#36798;&#24335;2)&#65306;&#22914;&#26524;&#26465;&#20214;&#34920;&#36798;&#24335;&#25104;&#31435;&#65292;&#36820;&#22238;&#34920;&#36798;&#24335;1&#65292;&#21542;&#21017;&#36820;&#22238;&#34920;&#36798;&#24335;2</span></p>
+<p class=rvps2><span class=rvts6>&#9313;case&#24773;&#20917;1</span></p>
+<p class=rvps2><span class=rvts6>case &#21464;&#37327;&#25110;&#34920;&#36798;&#24335;&#25110;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts6>when &#24120;&#37327;1 then &#20540;1</span></p>
+<p class=rvps2><span class=rvts6>when &#24120;&#37327;2 then &#20540;2</span></p>
+<p class=rvps2><span class=rvts6>...</span></p>
+<p class=rvps2><span class=rvts6>else &#20540;n</span></p>
+<p class=rvps2><span class=rvts6>end</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#9314;case&#24773;&#20917;2</span></p>
+<p class=rvps2><span class=rvts6>case </span></p>
+<p class=rvps2><span class=rvts6>when &#26465;&#20214;1 then &#20540;1</span></p>
+<p class=rvps2><span class=rvts6>when &#26465;&#20214;2 then &#20540;2</span></p>
+<p class=rvps2><span class=rvts6>...</span></p>
+<p class=rvps2><span class=rvts6>else &#20540;n</span></p>
+<p class=rvps2><span class=rvts6>end</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#20998;&#32452;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#20998;&#31867;</span></p>
+<p class=rvps2><span class=rvts4>max &#26368;&#22823;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>min &#26368;&#23567;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>sum &#21644;</span></p>
+<p class=rvps2><span class=rvts4>avg &#24179;&#22343;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>count &#35745;&#31639;&#20010;&#25968;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>select max(&#23383;&#27573;) from &#34920;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#25903;&#25345;&#30340;&#31867;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>sum&#21644;avg&#19968;&#33324;&#29992;&#20110;&#22788;&#29702;&#25968;&#20540;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>max&#12289;min&#12289;count&#21487;&#20197;&#22788;&#29702;&#20219;&#20309;&#25968;&#25454;&#31867;&#22411;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#20197;&#19978;&#20998;&#32452;&#20989;&#25968;&#37117;&#24573;&#30053;null</span></p>
+<p class=rvps2><span class=rvts4>&#9315;&#37117;&#21487;&#20197;&#25645;&#37197;distinct&#20351;&#29992;&#65292;&#23454;&#29616;&#21435;&#37325;&#30340;&#32479;&#35745;</span></p>
+<p class=rvps2><span class=rvts4>select sum(distinct &#23383;&#27573;) from &#34920;;</span></p>
+<p class=rvps2><span class=rvts4>&#9316;count&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>count(&#23383;&#27573;)&#65306;&#32479;&#35745;&#35813;&#23383;&#27573;&#38750;&#31354;&#20540;&#30340;&#20010;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>count(*):&#32479;&#35745;&#32467;&#26524;&#38598;&#30340;&#34892;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>&#26696;&#20363;&#65306;&#26597;&#35810;&#27599;&#20010;&#37096;&#38376;&#30340;&#21592;&#24037;&#20010;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>1 xx &nbsp; &nbsp;10</span></p>
+<p class=rvps2><span class=rvts4>2 dd &nbsp; &nbsp;20</span></p>
+<p class=rvps2><span class=rvts4>3 mm &nbsp; &nbsp;20</span></p>
+<p class=rvps2><span class=rvts4>4 aa &nbsp; &nbsp;40</span></p>
+<p class=rvps2><span class=rvts4>5 hh &nbsp; &nbsp;40</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>count(1):&#32479;&#35745;&#32467;&#26524;&#38598;&#30340;&#34892;&#25968;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#25928;&#29575;&#19978;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>MyISAM&#23384;&#20648;&#24341;&#25806;&#65292;count(*)&#26368;&#39640;</span></p>
+<p class=rvps2><span class=rvts4>InnoDB&#23384;&#20648;&#24341;&#25806;&#65292;count(*)&#21644;count(1)&#25928;&#29575;&gt;count(&#23383;&#27573;)</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9317; &#21644;&#20998;&#32452;&#20989;&#25968;&#19968;&#21516;&#26597;&#35810;&#30340;&#23383;&#27573;&#65292;&#35201;&#27714;&#26159;group by&#21518;&#20986;&#29616;&#30340;&#23383;&#27573;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#23384;&#20648;&#36807;&#31243;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21019;&#24314; &#9733;</span></p>
+<p class=rvps2><span class=rvts4>create procedure &#23384;&#20648;&#36807;&#31243;&#21517;(&#21442;&#25968;&#27169;&#24335; &#21442;&#25968;&#21517; &#21442;&#25968;&#31867;&#22411;)</span></p>
+<p class=rvps2><span class=rvts4>begin</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#23384;&#20648;&#36807;&#31243;&#20307;</span></p>
+<p class=rvps2><span class=rvts4>end</span></p>
+<p class=rvps2><span class=rvts4>&#27880;&#24847;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1.&#21442;&#25968;&#27169;&#24335;&#65306;in&#12289;out&#12289;inout&#65292;&#20854;&#20013;in&#21487;&#20197;&#30465;&#30053;</span></p>
+<p class=rvps2><span class=rvts4>2.&#23384;&#20648;&#36807;&#31243;&#20307;&#30340;&#27599;&#19968;&#26465;sql&#35821;&#21477;&#37117;&#38656;&#35201;&#29992;&#20998;&#21495;&#32467;&#23614;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#35843;&#29992;</span></p>
+<p class=rvps2><span class=rvts4>call &#23384;&#20648;&#36807;&#31243;&#21517;(&#23454;&#21442;&#21015;&#34920;)</span></p>
+<p class=rvps2><span class=rvts4>&#20030;&#20363;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#35843;&#29992;in&#27169;&#24335;&#30340;&#21442;&#25968;&#65306;call sp1&#65288;&#8216;&#20540;&#8217;&#65289;;</span></p>
+<p class=rvps2><span class=rvts4>&#35843;&#29992;out&#27169;&#24335;&#30340;&#21442;&#25968;&#65306;set @name; call sp1(@name);select @name;</span></p>
+<p class=rvps2><span class=rvts4>&#35843;&#29992;inout&#27169;&#24335;&#30340;&#21442;&#25968;&#65306;set @name=&#20540;; call sp1(@name); select @name;</span></p>
+<p class=rvps2><span class=rvts4>&#19977;&#12289;&#26597;&#30475;</span></p>
+<p class=rvps2><span class=rvts4>show create procedure &#23384;&#20648;&#36807;&#31243;&#21517;;</span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts4>drop procedure &#23384;&#20648;&#36807;&#31243;&#21517;;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#23384;&#20648;&#36807;&#31243;&#21644;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#35828;&#26126;&#65306;&#37117;&#31867;&#20284;&#20110;java&#20013;&#30340;&#26041;&#27861;&#65292;&#23558;&#19968;&#32452;&#23436;&#25104;&#29305;&#23450;&#21151;&#33021;&#30340;&#36923;&#36753;&#35821;&#21477;&#21253;&#35013;&#36215;&#26469;&#65292;&#23545;&#22806;&#26292;&#38706;&#21517;&#23383;</span></p>
+<p class=rvps2><span class=rvts6>&#22909;&#22788;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#25552;&#39640;&#37325;&#29992;&#24615;</span></p>
+<p class=rvps2><span class=rvts6>2&#12289;sql&#35821;&#21477;&#31616;&#21333;</span></p>
+<p class=rvps2><span class=rvts6>3&#12289;&#20943;&#23569;&#20102;&#21644;&#25968;&#25454;&#24211;&#26381;&#21153;&#22120;&#36830;&#25509;&#30340;&#27425;&#25968;&#65292;&#25552;&#39640;&#20102;&#25928;&#29575;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#20998;&#39029;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#24212;&#29992;&#22330;&#26223;</span></p>
+<p class=rvps2><span class=rvts4>&#24403;&#35201;&#26597;&#35810;&#30340;&#26465;&#30446;&#25968;&#22826;&#22810;&#65292;&#19968;&#39029;&#26174;&#31034;&#19981;&#20840;</span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;</span></p>
+<p class=rvps2><span class=rvts4>limit &#12304;offset&#65292;&#12305;size;</span></p>
+<p class=rvps2><span class=rvts4>&#27880;&#24847;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>offset&#20195;&#34920;&#30340;&#26159;&#36215;&#22987;&#30340;&#26465;&#30446;&#32034;&#24341;&#65292;&#40664;&#35748;&#20174;0&#21345;&#27515;</span></p>
+<p class=rvps2><span class=rvts4>size&#20195;&#34920;&#30340;&#26159;&#26174;&#31034;&#30340;&#26465;&#30446;&#25968;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#20844;&#24335;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#20551;&#22914;&#35201;&#26174;&#31034;&#30340;&#39029;&#25968;&#20026;page&#65292;&#27599;&#19968;&#39029;&#26465;&#30446;&#25968;&#20026;size</span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;</span></p>
+<p class=rvps2><span class=rvts10>limit (page-1)*size,size;</span></p>
+<p><span class=rvts10><br></span></p>
+<p><span class=rvts10><br></span></p>
+<p><span class=rvts10><br></span></p>
+<p class=rvps3><span class=rvts5>&#20998;&#25903;&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;if&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts6>&#21151;&#33021;&#65306;&#23454;&#29616;&#31616;&#21333;&#21452;&#20998;&#25903;</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>if(&#26465;&#20214;&#65292;&#20540;1&#65292;&#20540;2)</span></p>
+<p class=rvps2><span class=rvts6>&#20301;&#32622;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#21487;&#20197;&#20316;&#20026;&#34920;&#36798;&#24335;&#25918;&#22312;&#20219;&#20309;&#20301;&#32622;</span></p>
+<p class=rvps2><span class=rvts6>2&#12289;case&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts6>&#21151;&#33021;&#65306;&#23454;&#29616;&#22810;&#20998;&#25903;</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;1&#65306;</span></p>
+<p class=rvps2><span class=rvts6>case &#34920;&#36798;&#24335;&#25110;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts6>when &#20540;1 then &#35821;&#21477;1;</span></p>
+<p class=rvps2><span class=rvts6>when &#20540;2 then &#35821;&#21477;2&#65307;</span></p>
+<p class=rvps2><span class=rvts6>..</span></p>
+<p class=rvps2><span class=rvts6>else &#35821;&#21477;n;</span></p>
+<p class=rvps2><span class=rvts6>end [case];</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;2&#65306;</span></p>
+<p class=rvps2><span class=rvts6>case </span></p>
+<p class=rvps2><span class=rvts6>when &#26465;&#20214;1 then &#35821;&#21477;1;</span></p>
+<p class=rvps2><span class=rvts6>when &#26465;&#20214;2 then &#35821;&#21477;2&#65307;</span></p>
+<p class=rvps2><span class=rvts6>..</span></p>
+<p class=rvps2><span class=rvts6>else &#35821;&#21477;n;</span></p>
+<p class=rvps2><span class=rvts6>end [case];</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20301;&#32622;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#21487;&#20197;&#25918;&#22312;&#20219;&#20309;&#20301;&#32622;&#65292;</span></p>
+<p class=rvps2><span class=rvts4>&#22914;&#26524;&#25918;&#22312;begin end &#22806;&#38754;&#65292;&#20316;&#20026;&#34920;&#36798;&#24335;&#32467;&#21512;&#30528;&#20854;&#20182;&#35821;&#21477;&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts4>&#22914;&#26524;&#25918;&#22312;begin end &#37324;&#38754;&#65292;&#19968;&#33324;&#20316;&#20026;&#29420;&#31435;&#30340;&#35821;&#21477;&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts6>3&#12289;if&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts4>&#21151;&#33021;&#65306;&#23454;&#29616;&#22810;&#20998;&#25903;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>if &#26465;&#20214;1 then &#35821;&#21477;1;</span></p>
+<p class=rvps2><span class=rvts4>elseif &#26465;&#20214;2 then &#35821;&#21477;2;</span></p>
+<p class=rvps2><span class=rvts4>...</span></p>
+<p class=rvps2><span class=rvts4>else &#35821;&#21477;n;</span></p>
+<p class=rvps2><span class=rvts4>end if;</span></p>
+<p class=rvps2><span class=rvts4>&#20301;&#32622;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#21482;&#33021;&#25918;&#22312;begin end&#20013;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#20998;&#32452;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>select &#20998;&#32452;&#20989;&#25968;&#65292;&#20998;&#32452;&#21518;&#30340;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;</span></p>
+<p class=rvps2><span class=rvts4>&#12304;where &#31579;&#36873;&#26465;&#20214;&#12305;</span></p>
+<p class=rvps2><span class=rvts4>group by &#20998;&#32452;&#30340;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4>&#12304;having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;&#12305;</span></p>
+<p class=rvps2><span class=rvts4>&#12304;order by &#25490;&#24207;&#21015;&#34920;&#12305;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20351;&#29992;&#20851;&#38190;&#23383;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#31579;&#36873;&#30340;&#34920;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20301;&#32622;</span></p>
+<p class=rvps2><span class=rvts6>&#20998;&#32452;&#21069;&#31579;&#36873;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>where</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#21407;&#22987;&#34920;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>group by&#30340;&#21069;&#38754;</span></p>
+<p class=rvps2><span class=rvts6>&#20998;&#32452;&#21518;&#31579;&#36873;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>having</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20998;&#32452;&#21518;&#30340;&#32467;&#26524;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>group by &#30340;&#21518;&#38754;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21019;&#24314;</span></p>
+<p class=rvps2><span class=rvts6>create function &#20989;&#25968;&#21517;(&#21442;&#25968;&#21517; &#21442;&#25968;&#31867;&#22411;) returns &nbsp;&#36820;&#22238;&#31867;&#22411;</span></p>
+<p class=rvps2><span class=rvts6>begin</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20989;&#25968;&#20307;</span></p>
+<p class=rvps2><span class=rvts6>end</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#27880;&#24847;&#65306;&#20989;&#25968;&#20307;&#20013;&#32943;&#23450;&#38656;&#35201;&#26377;return&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#35843;&#29992;</span></p>
+<p class=rvps2><span class=rvts6>select &#20989;&#25968;&#21517;(&#23454;&#21442;&#21015;&#34920;);</span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#26597;&#30475;</span></p>
+<p class=rvps2><span class=rvts6>show create function &#20989;&#25968;&#21517;;</span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts6>drop function &#20989;&#25968;&#21517;&#65307;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#22522;&#30784;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#26597;&#35810;&#21015;&#34920;&#21487;&#20197;&#26159;&#23383;&#27573;&#12289;&#24120;&#37327;&#12289;&#34920;&#36798;&#24335;&#12289;&#20989;&#25968;&#65292;&#20063;&#21487;&#20197;&#26159;&#22810;&#20010;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#26597;&#35810;&#32467;&#26524;&#26159;&#19968;&#20010;&#34394;&#25311;&#34920;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#19977;&#12289;&#31034;&#20363;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#26597;&#35810;&#21333;&#20010;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4>select &#23383;&#27573;&#21517; from &#34920;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#26597;&#35810;&#22810;&#20010;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4>select &#23383;&#27573;&#21517;&#65292;&#23383;&#27573;&#21517; from &#34920;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#26597;&#35810;&#25152;&#26377;&#23383;&#27573;</span></p>
+<p class=rvps2><span class=rvts4>select * from &#34920;&#21517;</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#26597;&#35810;&#24120;&#37327;</span></p>
+<p class=rvps2><span class=rvts4>select &#24120;&#37327;&#20540;;</span></p>
+<p class=rvps2><span class=rvts4>&#27880;&#24847;&#65306;&#23383;&#31526;&#22411;&#21644;&#26085;&#26399;&#22411;&#30340;&#24120;&#37327;&#20540;&#24517;&#39035;&#29992;&#21333;&#24341;&#21495;&#24341;&#36215;&#26469;&#65292;&#25968;&#20540;&#22411;&#19981;&#38656;&#35201;</span></p>
+<p class=rvps2><span class=rvts4>5&#12289;&#26597;&#35810;&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>select &#20989;&#25968;&#21517;(&#23454;&#21442;&#21015;&#34920;);</span></p>
+<p class=rvps2><span class=rvts4>6&#12289;&#26597;&#35810;&#34920;&#36798;&#24335;</span></p>
+<p class=rvps2><span class=rvts4>select 100/1234;</span></p>
+<p class=rvps2><span class=rvts4>7&#12289;&#36215;&#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;as</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#31354;&#26684;</span></p>
+<p class=rvps2><span class=rvts4>8&#12289;&#21435;&#37325;</span></p>
+<p class=rvps2><span class=rvts4>select distinct &#23383;&#27573;&#21517; from &#34920;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>9&#12289;+</span></p>
+<p class=rvps2><span class=rvts4>&#20316;&#29992;&#65306;&#20570;&#21152;&#27861;&#36816;&#31639;</span></p>
+<p class=rvps2><span class=rvts4>select &#25968;&#20540;+&#25968;&#20540;; &#30452;&#25509;&#36816;&#31639;</span></p>
+<p class=rvps2><span class=rvts4>select &#23383;&#31526;+&#25968;&#20540;;&#20808;&#35797;&#22270;&#23558;&#23383;&#31526;&#36716;&#25442;&#25104;&#25968;&#20540;&#65292;&#22914;&#26524;&#36716;&#25442;&#25104;&#21151;&#65292;&#21017;&#32487;&#32493;&#36816;&#31639;&#65307;&#21542;&#21017;&#36716;&#25442;&#25104;0&#65292;&#20877;&#20570;&#36816;&#31639;</span></p>
+<p class=rvps2><span class=rvts4>select null+&#20540;;&#32467;&#26524;&#37117;&#20026;null</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>10&#12289;&#12304;&#34917;&#20805;&#12305;concat&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>&#21151;&#33021;&#65306;&#25340;&#25509;&#23383;&#31526;</span></p>
+<p class=rvps2><span class=rvts4>select concat(&#23383;&#31526;1&#65292;&#23383;&#31526;2&#65292;&#23383;&#31526;3,...);</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>11&#12289;&#12304;&#34917;&#20805;&#12305;ifnull&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>&#21151;&#33021;&#65306;&#21028;&#26029;&#26576;&#23383;&#27573;&#25110;&#34920;&#36798;&#24335;&#26159;&#21542;&#20026;null&#65292;&#22914;&#26524;&#20026;null &#36820;&#22238;&#25351;&#23450;&#30340;&#20540;&#65292;&#21542;&#21017;&#36820;&#22238;&#21407;&#26412;&#30340;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>select ifnull(commission_pct,0) from employees;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>12&#12289;&#12304;&#34917;&#20805;&#12305;isnull&#20989;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>&#21151;&#33021;&#65306;&#21028;&#26029;&#26576;&#23383;&#27573;&#25110;&#34920;&#36798;&#24335;&#26159;&#21542;&#20026;null&#65292;&#22914;&#26524;&#26159;&#65292;&#21017;&#36820;&#22238;1&#65292;&#21542;&#21017;&#36820;&#22238;0</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#24211;&#30340;&#31649;&#29702;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#21019;&#24314;&#24211;</span></p>
+<p class=rvps2><span class=rvts4>create database &#12304;if not exists&#12305; &#24211;&#21517;&#12304; character set &#23383;&#31526;&#38598;&#21517;&#12305;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#20462;&#25913;&#24211;</span></p>
+<p class=rvps2><span class=rvts4>alter database &#24211;&#21517; character set &#23383;&#31526;&#38598;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>&#19977;&#12289;&#21024;&#38500;&#24211;</span></p>
+<p class=rvps2><span class=rvts4>drop database &#12304;if exists&#12305; &#24211;&#21517;;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#36830;&#25509;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21547;&#20041;</span></p>
+<p class=rvps2><span class=rvts6>&#24403;&#26597;&#35810;&#20013;&#28041;&#21450;&#21040;&#20102;&#22810;&#20010;&#34920;&#30340;&#23383;&#27573;&#65292;&#38656;&#35201;&#20351;&#29992;&#22810;&#34920;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6>select &#23383;&#27573;1&#65292;&#23383;&#27573;2</span></p>
+<p class=rvps2><span class=rvts6>from &#34920;1&#65292;&#34920;2,...;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#31515;&#21345;&#23572;&#20056;&#31215;&#65306;&#24403;&#26597;&#35810;&#22810;&#20010;&#34920;&#26102;&#65292;&#27809;&#26377;&#28155;&#21152;&#26377;&#25928;&#30340;&#36830;&#25509;&#26465;&#20214;&#65292;&#23548;&#33268;&#22810;&#20010;&#34920;&#25152;&#26377;&#34892;&#23454;&#29616;&#23436;&#20840;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6>&#22914;&#20309;&#35299;&#20915;&#65306;&#28155;&#21152;&#26377;&#25928;&#30340;</span><span class=rvts7>&#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts7><br></span></p>
+<p class=rvps2><span class=rvts7><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#20998;&#31867;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#25353;&#24180;&#20195;&#20998;&#31867;&#65306;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>sql92&#65306;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#31561;&#20540;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#38750;&#31561;&#20540;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#33258;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20063;&#25903;&#25345;&#19968;&#37096;&#20998;&#22806;&#36830;&#25509;&#65288;&#29992;&#20110;oracle&#12289;sqlserver&#65292;mysql&#19981;&#25903;&#25345;&#65289;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>sql99&#12304;&#25512;&#33616;&#20351;&#29992;&#12305;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20869;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#31561;&#20540;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#38750;&#31561;&#20540;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#33258;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#22806;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#24038;&#22806;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#21491;&#22806;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20840;&#22806;&#65288;mysql&#19981;&#25903;&#25345;&#65289;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20132;&#21449;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;SQL92&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#31561;&#20540;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>from &#34920;1 &#21035;&#21517;,&#34920;2 &#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>where &#34920;1.key=&#34920;2.key</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;and &#31579;&#36873;&#26465;&#20214;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;group by &#20998;&#32452;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;order by &#25490;&#24207;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#9312; &#19968;&#33324;&#20026;&#34920;&#36215;&#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#9313;&#22810;&#34920;&#30340;&#39034;&#24207;&#21487;&#20197;&#35843;&#25442;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#9314;n&#34920;&#36830;&#25509;&#33267;&#23569;&#38656;&#35201;n-1&#20010;&#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#9315;&#31561;&#20540;&#36830;&#25509;&#30340;&#32467;&#26524;&#26159;&#22810;&#34920;&#30340;&#20132;&#38598;&#37096;&#20998;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#38750;&#31561;&#20540;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>from &#34920;1 &#21035;&#21517;,&#34920;2 &#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>where &#38750;&#31561;&#20540;&#30340;&#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;and &#31579;&#36873;&#26465;&#20214;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;group by &#20998;&#32452;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;order by &#25490;&#24207;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts6>3&#12289;&#33258;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>from &#34920; &#21035;&#21517;1,&#34920; &#21035;&#21517;2</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>where &#31561;&#20540;&#30340;&#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;and &#31579;&#36873;&#26465;&#20214;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;group by &#20998;&#32452;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;&#12305;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#12304;order by &#25490;&#24207;&#23383;&#27573;&#12305;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;SQL99&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#20869;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts6>from &#34920;1 &#21035;&#21517;</span></p>
+<p class=rvps7><span class=rvts6>&#12304;inner&#12305; join &#34920;2 &#21035;&#21517; on &#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps7><span class=rvts6>where &#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps7><span class=rvts6>group by &#20998;&#32452;&#21015;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;</span></p>
+<p class=rvps7><span class=rvts6>order by &#25490;&#24207;&#21015;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>limit &#23376;&#21477;;</span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps7><span class=rvts6>&#9312;&#34920;&#30340;&#39034;&#24207;&#21487;&#20197;&#35843;&#25442;</span></p>
+<p class=rvps7><span class=rvts6>&#9313;&#20869;&#36830;&#25509;&#30340;&#32467;&#26524;=&#22810;&#34920;&#30340;&#20132;&#38598;</span></p>
+<p class=rvps7><span class=rvts6>&#9314;n&#34920;&#36830;&#25509;&#33267;&#23569;&#38656;&#35201;n-1&#20010;&#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6>&#20998;&#31867;&#65306;</span></p>
+<p class=rvps7><span class=rvts6>&#31561;&#20540;&#36830;&#25509;</span></p>
+<p class=rvps7><span class=rvts6>&#38750;&#31561;&#20540;&#36830;&#25509;</span></p>
+<p class=rvps7><span class=rvts6>&#33258;&#36830;&#25509;</span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps7><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#22806;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts6>from &#34920;1 &#21035;&#21517;</span></p>
+<p class=rvps7><span class=rvts6>left|right|full&#12304;outer&#12305; join &#34920;2 &#21035;&#21517; on &#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps7><span class=rvts6>where &#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps7><span class=rvts6>group by &#20998;&#32452;&#21015;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>having &#20998;&#32452;&#21518;&#30340;&#31579;&#36873;</span></p>
+<p class=rvps7><span class=rvts6>order by &#25490;&#24207;&#21015;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>limit &#23376;&#21477;;</span></p>
+<p class=rvps7><span class=rvts6>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps7><span class=rvts6>&#9312;&#26597;&#35810;&#30340;&#32467;&#26524;=&#20027;&#34920;&#20013;&#25152;&#26377;&#30340;&#34892;&#65292;&#22914;&#26524;&#20174;&#34920;&#21644;&#23427;&#21305;&#37197;&#30340;&#23558;&#26174;&#31034;&#21305;&#37197;&#34892;&#65292;&#22914;&#26524;&#20174;&#34920;&#27809;&#26377;&#21305;&#37197;&#30340;&#21017;&#26174;&#31034;null</span></p>
+<p class=rvps7><span class=rvts6>&#9313;left join &#24038;&#36793;&#30340;&#23601;&#26159;&#20027;&#34920;&#65292;right join &#21491;&#36793;&#30340;&#23601;&#26159;&#20027;&#34920;</span></p>
+<p class=rvps7><span class=rvts6> &nbsp;full join &#20004;&#36793;&#37117;&#26159;&#20027;&#34920;</span></p>
+<p class=rvps7><span class=rvts6>&#9314;&#19968;&#33324;&#29992;&#20110;&#26597;&#35810;&#38500;&#20102;&#20132;&#38598;&#37096;&#20998;&#30340;&#21097;&#20313;&#30340;&#19981;&#21305;&#37197;&#30340;&#34892;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>3&#12289;&#20132;&#21449;&#36830;&#25509;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts6>from &#34920;1 &#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts6>cross join &#34920;2 &#21035;&#21517;;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#31867;&#20284;&#20110;&#31515;&#21345;&#23572;&#20056;&#31215;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#32852;&#21512;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#21547;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>union&#65306;&#21512;&#24182;&#12289;&#32852;&#21512;&#65292;&#23558;&#22810;&#27425;&#26597;&#35810;&#32467;&#26524;&#21512;&#24182;&#25104;&#19968;&#20010;&#32467;&#26524;</span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>&#26597;&#35810;&#35821;&#21477;1</span></p>
+<p class=rvps2><span class=rvts4>union &#12304;all&#12305;</span></p>
+<p class=rvps2><span class=rvts4>&#26597;&#35810;&#35821;&#21477;2</span></p>
+<p class=rvps2><span class=rvts4>union &#12304;all&#12305;</span></p>
+<p class=rvps2><span class=rvts4>...</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#19977;&#12289;&#24847;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#23558;&#19968;&#26465;&#27604;&#36739;&#22797;&#26434;&#30340;&#26597;&#35810;&#35821;&#21477;&#25286;&#20998;&#25104;&#22810;&#26465;&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#36866;&#29992;&#20110;&#26597;&#35810;&#22810;&#20010;&#34920;&#30340;&#26102;&#20505;&#65292;&#26597;&#35810;&#30340;&#21015;&#22522;&#26412;&#26159;&#19968;&#33268;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#22235;&#12289;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#35201;&#27714;&#22810;&#26465;&#26597;&#35810;&#35821;&#21477;&#30340;&#26597;&#35810;&#21015;&#25968;&#24517;&#39035;&#19968;&#33268;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#35201;&#27714;&#22810;&#26465;&#26597;&#35810;&#35821;&#21477;&#30340;&#26597;&#35810;&#30340;&#21508;&#21015;&#31867;&#22411;&#12289;&#39034;&#24207;&#26368;&#22909;&#19968;&#33268;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;union &#21435;&#37325;&#65292;union all&#21253;&#21547;&#37325;&#22797;&#39033;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#27969;&#31243;&#25511;&#21046;&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#35828;&#26126;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#39034;&#24207;&#32467;&#26500;&#65306;&#31243;&#24207;&#20174;&#19978;&#24448;&#19979;&#20381;&#27425;&#25191;&#34892;</span></p>
+<p class=rvps2><span class=rvts6>&#20998;&#25903;&#32467;&#26500;&#65306;&#31243;&#24207;&#25353;&#26465;&#20214;&#36827;&#34892;&#36873;&#25321;&#25191;&#34892;&#65292;&#20174;&#20004;&#26465;&#25110;&#22810;&#26465;&#36335;&#24452;&#20013;&#36873;&#25321;&#19968;&#26465;&#25191;&#34892;</span></p>
+<p class=rvps2><span class=rvts6>&#24490;&#29615;&#32467;&#26500;&#65306;&#31243;&#24207;&#28385;&#36275;&#19968;&#23450;&#26465;&#20214;&#19979;&#65292;&#37325;&#22797;&#25191;&#34892;&#19968;&#32452;&#35821;&#21477;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#25490;&#24207;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;</span></p>
+<p class=rvps2><span class=rvts4>where &#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4>order by &#25490;&#24207;&#21015;&#34920; &#12304;asc}desc&#12305;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;asc &#65306;&#21319;&#24207;&#65292;&#22914;&#26524;&#19981;&#20889;&#40664;&#35748;&#21319;&#24207;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; desc&#65306;&#38477;&#24207;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#25490;&#24207;&#21015;&#34920; &#25903;&#25345; &#21333;&#20010;&#23383;&#27573;&#12289;&#22810;&#20010;&#23383;&#27573;&#12289;&#20989;&#25968;&#12289;&#34920;&#36798;&#24335;&#12289;&#21035;&#21517;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>3&#12289;order by&#30340;&#20301;&#32622;&#19968;&#33324;&#25918;&#22312;&#26597;&#35810;&#35821;&#21477;&#30340;&#26368;&#21518;&#65288;&#38500;limit&#35821;&#21477;&#20043;&#22806;&#65289;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#20854;&#20182;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#26041;&#24335;&#19968;&#65306;&#20351;&#29992;delete</span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21024;&#38500;&#21333;&#34920;&#30340;&#35760;&#24405;&#9733;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;delete from &#34920;&#21517; &#12304;where &#31579;&#36873;&#26465;&#20214;&#12305;&#12304;limit &#26465;&#30446;&#25968;&#12305;</span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#32423;&#32852;&#21024;&#38500;[&#34917;&#20805;]</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>delete &#21035;&#21517;1,&#21035;&#21517;2 from &#34920;1 &#21035;&#21517; </span></p>
+<p class=rvps2><span class=rvts4>inner|left|right join &#34920;2 &#21035;&#21517; </span></p>
+<p class=rvps2><span class=rvts4>on &#36830;&#25509;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4> &#12304;where &#31579;&#36873;&#26465;&#20214;&#12305;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#26041;&#24335;&#20108;&#65306;&#20351;&#29992;truncate</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;truncate table &#34920;&#21517;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20004;&#31181;&#26041;&#24335;&#30340;&#21306;&#21035;&#12304;&#38754;&#35797;&#39064;&#12305;&#9733;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts4>1.truncate&#21024;&#38500;&#21518;&#65292;&#22914;&#26524;&#20877;&#25554;&#20837;&#65292;&#26631;&#35782;&#21015;&#20174;1&#24320;&#22987;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp;delete&#21024;&#38500;&#21518;&#65292;&#22914;&#26524;&#20877;&#25554;&#20837;&#65292;&#26631;&#35782;&#21015;&#20174;&#26029;&#28857;&#24320;&#22987;</span></p>
+<p class=rvps2><span class=rvts4>2.delete&#21487;&#20197;&#28155;&#21152;&#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4> truncate&#19981;&#21487;&#20197;&#28155;&#21152;&#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4>3.truncate&#25928;&#29575;&#36739;&#39640;</span></p>
+<p class=rvps2><span class=rvts4>4.truncate&#27809;&#26377;&#36820;&#22238;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>delete&#21487;&#20197;&#36820;&#22238;&#21463;&#24433;&#21709;&#30340;&#34892;&#25968;</span></p>
+<p class=rvps2><span class=rvts4>5.truncate&#19981;&#21487;&#20197;&#22238;&#28378;</span></p>
+<p class=rvps2><span class=rvts4>delete&#21487;&#20197;&#22238;&#28378;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#20107;&#21153;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#21547;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>&#20107;&#21153;&#65306;&#19968;&#26465;&#25110;&#22810;&#26465;sql&#35821;&#21477;&#32452;&#25104;&#19968;&#20010;&#25191;&#34892;&#21333;&#20301;&#65292;&#19968;&#32452;sql&#35821;&#21477;&#35201;&#20040;&#37117;&#25191;&#34892;&#35201;&#20040;&#37117;&#19981;&#25191;&#34892;</span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#29305;&#28857;&#65288;ACID&#65289;</span></p>
+<p class=rvps2><span class=rvts4>A &#21407;&#23376;&#24615;&#65306;&#19968;&#20010;&#20107;&#21153;&#26159;&#19981;&#21487;&#20877;&#20998;&#21106;&#30340;&#25972;&#20307;&#65292;&#35201;&#20040;&#37117;&#25191;&#34892;&#35201;&#20040;&#37117;&#19981;&#25191;&#34892;</span></p>
+<p class=rvps2><span class=rvts4>C &#19968;&#33268;&#24615;&#65306;&#19968;&#20010;&#20107;&#21153;&#21487;&#20197;&#20351;&#25968;&#25454;&#20174;&#19968;&#20010;&#19968;&#33268;&#29366;&#24577;&#20999;&#25442;&#21040;&#21478;&#22806;&#19968;&#20010;&#19968;&#33268;&#30340;&#29366;&#24577;</span></p>
+<p class=rvps2><span class=rvts4>I &#38548;&#31163;&#24615;&#65306;&#19968;&#20010;&#20107;&#21153;&#19981;&#21463;&#20854;&#20182;&#20107;&#21153;&#30340;&#24178;&#25200;&#65292;&#22810;&#20010;&#20107;&#21153;&#20114;&#30456;&#38548;&#31163;&#30340;</span></p>
+<p class=rvps2><span class=rvts4>D &#25345;&#20037;&#24615;&#65306;&#19968;&#20010;&#20107;&#21153;&#19968;&#26086;&#25552;&#20132;&#20102;&#65292;&#21017;&#27704;&#20037;&#30340;&#25345;&#20037;&#21270;&#21040;&#26412;&#22320;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#19977;&#12289;&#20107;&#21153;&#30340;&#20351;&#29992;&#27493;&#39588; &#9733;</span></p>
+<p class=rvps2><span class=rvts4>&#20102;&#35299;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#38544;&#24335;&#65288;&#33258;&#21160;&#65289;&#20107;&#21153;&#65306;&#27809;&#26377;&#26126;&#26174;&#30340;&#24320;&#21551;&#21644;&#32467;&#26463;&#65292;&#26412;&#36523;&#23601;&#26159;&#19968;&#26465;&#20107;&#21153;&#21487;&#20197;&#33258;&#21160;&#25552;&#20132;&#65292;&#27604;&#22914;insert&#12289;update&#12289;delete</span></p>
+<p class=rvps2><span class=rvts4>&#26174;&#24335;&#20107;&#21153;&#65306;&#20855;&#26377;&#26126;&#26174;&#30340;&#24320;&#21551;&#21644;&#32467;&#26463;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#20351;&#29992;&#26174;&#24335;&#20107;&#21153;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#24320;&#21551;&#20107;&#21153;</span></p>
+<p class=rvps2><span class=rvts4>set autocommit=0;</span></p>
+<p class=rvps2><span class=rvts4>start transaction;#&#21487;&#20197;&#30465;&#30053;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#32534;&#20889;&#19968;&#32452;&#36923;&#36753;sql&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts4>&#27880;&#24847;&#65306;sql&#35821;&#21477;&#25903;&#25345;&#30340;&#26159;insert&#12289;update&#12289;delete</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#35774;&#32622;&#22238;&#28378;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>savepoint &#22238;&#28378;&#28857;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#32467;&#26463;&#20107;&#21153;</span></p>
+<p class=rvps2><span class=rvts4>&#25552;&#20132;&#65306;commit;</span></p>
+<p class=rvps2><span class=rvts4>&#22238;&#28378;&#65306;rollback;</span></p>
+<p class=rvps2><span class=rvts4>&#22238;&#28378;&#21040;&#25351;&#23450;&#30340;&#22320;&#26041;&#65306;rollback to &#22238;&#28378;&#28857;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>&#22235;&#12289;&#24182;&#21457;&#20107;&#21153;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#20107;&#21153;&#30340;&#24182;&#21457;&#38382;&#39064;&#26159;&#22914;&#20309;&#21457;&#29983;&#30340;&#65311;</span></p>
+<p class=rvps2><span class=rvts4>&#22810;&#20010;&#20107;&#21153; &#21516;&#26102; &#25805;&#20316; &#21516;&#19968;&#20010;&#25968;&#25454;&#24211;&#30340;&#30456;&#21516;&#25968;&#25454;&#26102;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#24182;&#21457;&#38382;&#39064;&#37117;&#26377;&#21738;&#20123;&#65311;</span></p>
+<p class=rvps2><span class=rvts4>&#33039;&#35835;&#65306;&#19968;&#20010;&#20107;&#21153;&#35835;&#21462;&#20102;&#20854;&#20182;&#20107;&#21153;&#36824;&#27809;&#26377;&#25552;&#20132;&#30340;&#25968;&#25454;&#65292;&#35835;&#21040;&#30340;&#26159;&#20854;&#20182;&#20107;&#21153;&#8220;&#26356;&#26032;&#8221;&#30340;&#25968;&#25454;</span></p>
+<p class=rvps2><span class=rvts4>&#19981;&#21487;&#37325;&#22797;&#35835;&#65306;&#19968;&#20010;&#20107;&#21153;&#22810;&#27425;&#35835;&#21462;&#65292;&#32467;&#26524;&#19981;&#19968;&#26679;</span></p>
+<p class=rvps2><span class=rvts4>&#24187;&#35835;&#65306;&#19968;&#20010;&#20107;&#21153;&#35835;&#21462;&#20102;&#20854;&#20182;&#20107;&#21153;&#36824;&#27809;&#26377;&#25552;&#20132;&#30340;&#25968;&#25454;&#65292;&#21482;&#26159;&#35835;&#21040;&#30340;&#26159; &#20854;&#20182;&#20107;&#21153;&#8220;&#25554;&#20837;&#8221;&#30340;&#25968;&#25454;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#22914;&#20309;&#35299;&#20915;&#24182;&#21457;&#38382;&#39064;</span></p>
+<p class=rvps2><span class=rvts4>&#36890;&#36807;&#35774;&#32622;&#38548;&#31163;&#32423;&#21035;&#26469;&#35299;&#20915;&#24182;&#21457;&#38382;&#39064;</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#38548;&#31163;&#32423;&#21035;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#33039;&#35835;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#19981;&#21487;&#37325;&#22797;&#35835;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#24187;&#35835;</span></p>
+<p class=rvps2><span class=rvts4>read uncommitted:&#35835;&#26410;&#25552;&#20132; &nbsp; &nbsp; &#215; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#215; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#215; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps2><span class=rvts11>read committed&#65306;&#35835;&#24050;&#25552;&#20132; &nbsp; &nbsp; &nbsp;&#8730; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#215; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#215;</span></p>
+<p class=rvps2><span class=rvts10>repeatable read&#65306;&#21487;&#37325;&#22797;&#35835; &nbsp; &nbsp; &#8730; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#8730; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#215;</span></p>
+<p class=rvps2><span class=rvts4>serializable&#65306;&#20018;&#34892;&#21270; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#8730; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#8730; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#8730;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#35270;&#22270;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#21547;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>mysql5.1&#29256;&#26412;&#20986;&#29616;&#30340;&#26032;&#29305;&#24615;&#65292;&#26412;&#36523;&#26159;&#19968;&#20010;&#34394;&#25311;&#34920;&#65292;&#23427;&#30340;&#25968;&#25454;&#26469;&#33258;&#20110;&#34920;&#65292;&#36890;&#36807;&#25191;&#34892;&#26102;&#21160;&#24577;&#29983;&#25104;&#12290;</span></p>
+<p class=rvps2><span class=rvts4>&#22909;&#22788;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#31616;&#21270;sql&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#25552;&#39640;&#20102;sql&#30340;&#37325;&#29992;&#24615;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#20445;&#25252;&#22522;&#34920;&#30340;&#25968;&#25454;&#65292;&#25552;&#39640;&#20102;&#23433;&#20840;&#24615;</span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#21019;&#24314;</span></p>
+<p class=rvps2><span class=rvts11>create view &#35270;&#22270;&#21517;</span></p>
+<p class=rvps2><span class=rvts11>as</span></p>
+<p class=rvps2><span class=rvts11>&#26597;&#35810;&#35821;&#21477;;</span></p>
+<p class=rvps2><span class=rvts9><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#20462;&#25913;</span></p>
+<p class=rvps2><span class=rvts6>&#26041;&#24335;&#19968;&#65306;</span></p>
+<p class=rvps2><span class=rvts11>create or replace view &#35270;&#22270;&#21517;</span></p>
+<p class=rvps2><span class=rvts11>as</span></p>
+<p class=rvps2><span class=rvts11>&#26597;&#35810;&#35821;&#21477;;</span></p>
+<p class=rvps2><span class=rvts12>&#26041;&#24335;&#20108;&#65306;</span></p>
+<p class=rvps2><span class=rvts11>alter view &#35270;&#22270;&#21517;</span></p>
+<p class=rvps2><span class=rvts11>as</span></p>
+<p class=rvps2><span class=rvts11>&#26597;&#35810;&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts4>drop view &#35270;&#22270;1&#65292;&#35270;&#22270;2,...;</span></p>
+<p class=rvps2><span class=rvts6>&#20116;&#12289;&#26597;&#30475;</span></p>
+<p class=rvps2><span class=rvts4>desc &#35270;&#22270;&#21517;;</span></p>
+<p class=rvps2><span class=rvts4>show create view &#35270;&#22270;&#21517;;</span></p>
+<p class=rvps2><span class=rvts6>&#20845;&#12289;&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts6>1.&#25554;&#20837;</span></p>
+<p class=rvps2><span class=rvts6>insert</span></p>
+<p class=rvps2><span class=rvts6>2.&#20462;&#25913;</span></p>
+<p class=rvps2><span class=rvts6>update</span></p>
+<p class=rvps2><span class=rvts6>3.&#21024;&#38500;</span></p>
+<p class=rvps2><span class=rvts6>delete</span></p>
+<p class=rvps2><span class=rvts6>4.&#26597;&#30475;</span></p>
+<p class=rvps2><span class=rvts6>select</span></p>
+<p class=rvps2><span class=rvts6>&#27880;&#24847;&#65306;&#35270;&#22270;&#19968;&#33324;&#29992;&#20110;&#26597;&#35810;&#30340;&#65292;&#32780;&#19981;&#26159;&#26356;&#26032;&#30340;&#65292;&#25152;&#20197;&#20855;&#22791;&#20197;&#19979;&#29305;&#28857;&#30340;&#35270;&#22270;&#37117;&#19981;&#20801;&#35768;&#26356;&#26032;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#21253;&#21547;&#20998;&#32452;&#20989;&#25968;&#12289;group by&#12289;distinct&#12289;having&#12289;union&#12289;</span></p>
+<p class=rvps2><span class=rvts4>&#9313;join</span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#24120;&#37327;&#35270;&#22270;</span></p>
+<p class=rvps2><span class=rvts4>&#9315;where&#21518;&#30340;&#23376;&#26597;&#35810;&#29992;&#21040;&#20102;from&#20013;&#30340;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>&#9316;&#29992;&#21040;&#20102;&#19981;&#21487;&#26356;&#26032;&#30340;&#35270;&#22270;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19971;&#12289;&#35270;&#22270;&#21644;&#34920;&#30340;&#23545;&#27604;</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20851;&#38190;&#23383;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#26159;&#21542;&#21344;&#29992;&#29289;&#29702;&#31354;&#38388;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20351;&#29992;</span></p>
+<p class=rvps2><span class=rvts6>&#35270;&#22270;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>view</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#21344;&#29992;&#36739;&#23567;&#65292;&#21482;&#20445;&#23384;sql&#36923;&#36753;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#19968;&#33324;&#29992;&#20110;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts6>&#34920;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>table</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#20445;&#23384;&#23454;&#38469;&#30340;&#25968;&#25454;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#22686;&#21024;&#25913;&#26597;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#25968;&#25454;&#24211;&#30340;&#30456;&#20851;&#27010;&#24565;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#25968;&#25454;&#24211;&#30340;&#22909;&#22788;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#21487;&#20197;&#25345;&#20037;&#21270;&#25968;&#25454;&#21040;&#26412;&#22320;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#32467;&#26500;&#21270;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#25968;&#25454;&#24211;&#30340;&#24120;&#35265;&#27010;&#24565; &#9733;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;DB&#65306;&#25968;&#25454;&#24211;&#65292;&#23384;&#20648;&#25968;&#25454;&#30340;&#23481;&#22120;</span></p>
+<p class=rvps2><span class=rvts6>2&#12289;DBMS&#65306;&#25968;&#25454;&#24211;&#31649;&#29702;&#31995;&#32479;&#65292;&#21448;&#31216;&#20026;&#25968;&#25454;&#24211;&#36719;&#20214;&#25110;&#25968;&#25454;&#24211;&#20135;&#21697;&#65292;&#29992;&#20110;&#21019;&#24314;&#25110;&#31649;&#29702;DB</span></p>
+<p class=rvps2><span class=rvts6>3&#12289;SQL&#65306;&#32467;&#26500;&#21270;&#26597;&#35810;&#35821;&#35328;&#65292;&#29992;&#20110;&#21644;&#25968;&#25454;&#24211;&#36890;&#20449;&#30340;&#35821;&#35328;&#65292;&#19981;&#26159;&#26576;&#20010;&#25968;&#25454;&#24211;&#36719;&#20214;&#29305;&#26377;&#30340;&#65292;&#32780;&#26159;&#20960;&#20046;&#25152;&#26377;&#30340;&#20027;&#27969;&#25968;&#25454;&#24211;&#36719;&#20214;&#36890;&#29992;&#30340;&#35821;&#35328;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#25968;&#25454;&#24211;&#23384;&#20648;&#25968;&#25454;&#30340;&#29305;&#28857;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#25968;&#25454;&#23384;&#25918;&#21040;&#34920;&#20013;&#65292;&#28982;&#21518;&#34920;&#20877;&#25918;&#21040;&#24211;&#20013;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#19968;&#20010;&#24211;&#20013;&#21487;&#20197;&#26377;&#22810;&#24352;&#34920;&#65292;&#27599;&#24352;&#34920;&#20855;&#26377;&#21807;&#19968;&#30340;&#34920;&#21517;&#29992;&#26469;&#26631;&#35782;&#33258;&#24049;</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#34920;&#20013;&#26377;&#19968;&#20010;&#25110;&#22810;&#20010;&#21015;&#65292;&#21015;&#21448;&#31216;&#20026;&#8220;&#23383;&#27573;&#8221;&#65292;&#30456;&#24403;&#20110;java&#20013;&#8220;&#23646;&#24615;&#8221;</span></p>
+<p class=rvps2><span class=rvts4>4&#12289;&#34920;&#20013;&#30340;&#27599;&#19968;&#34892;&#25968;&#25454;&#65292;&#30456;&#24403;&#20110;java&#20013;&#8220;&#23545;&#35937;&#8221;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#22235;&#12289;&#24120;&#35265;&#30340;&#25968;&#25454;&#24211;&#31649;&#29702;&#31995;&#32479;</span></p>
+<p class=rvps2><span class=rvts4>mysql&#12289;oracle&#12289;db2&#12289;sqlserver</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#25968;&#25454;&#31867;&#22411;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#25968;&#20540;&#22411;</span></p>
+<p class=rvps2><span class=rvts6>1&#12289;&#25972;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>tinyint&#12289;smallint&#12289;mediumint&#12289;int/integer&#12289;bigint</span></p>
+<p class=rvps2><span class=rvts4>1 &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;&#37117;&#21487;&#20197;&#35774;&#32622;&#26080;&#31526;&#21495;&#21644;&#26377;&#31526;&#21495;&#65292;&#40664;&#35748;&#26377;&#31526;&#21495;&#65292;&#36890;&#36807;unsigned&#35774;&#32622;&#26080;&#31526;&#21495;</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#22914;&#26524;&#36229;&#20986;&#20102;&#33539;&#22260;&#65292;&#20250;&#25253;out or range&#24322;&#24120;&#65292;&#25554;&#20837;&#20020;&#30028;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#9314;&#38271;&#24230;&#21487;&#20197;&#19981;&#25351;&#23450;&#65292;&#40664;&#35748;&#20250;&#26377;&#19968;&#20010;&#38271;&#24230;</span></p>
+<p class=rvps2><span class=rvts4>&#38271;&#24230;&#20195;&#34920;&#26174;&#31034;&#30340;&#26368;&#22823;&#23485;&#24230;&#65292;&#22914;&#26524;&#19981;&#22815;&#21017;&#24038;&#36793;&#29992;0&#22635;&#20805;&#65292;&#20294;&#38656;&#35201;&#25645;&#37197;zerofill&#65292;&#24182;&#19988;&#40664;&#35748;&#21464;&#20026;&#26080;&#31526;&#21495;&#25972;&#22411;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>2&#12289;&#28014;&#28857;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>&#23450;&#28857;&#25968;&#65306;decimal(M,D)</span></p>
+<p class=rvps2><span class=rvts4>&#28014;&#28857;&#25968;:</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>float(M,D) &nbsp; 4</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>double(M,D) &nbsp;8</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#29305;&#28857;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#9312;M&#20195;&#34920;&#25972;&#25968;&#37096;&#20301;+&#23567;&#25968;&#37096;&#20301;&#30340;&#20010;&#25968;&#65292;D&#20195;&#34920;&#23567;&#25968;&#37096;&#20301;</span></p>
+<p class=rvps2><span class=rvts4>&#9313;&#22914;&#26524;&#36229;&#20986;&#33539;&#22260;&#65292;&#21017;&#25253;out or range&#24322;&#24120;&#65292;&#24182;&#19988;&#25554;&#20837;&#20020;&#30028;&#20540;</span></p>
+<p class=rvps2><span class=rvts4>&#9314;M&#21644;D&#37117;&#21487;&#20197;&#30465;&#30053;&#65292;&#20294;&#23545;&#20110;&#23450;&#28857;&#25968;&#65292;M&#40664;&#35748;&#20026;10&#65292;D&#40664;&#35748;&#20026;0</span></p>
+<p class=rvps2><span class=rvts4>&#9315;&#22914;&#26524;&#31934;&#24230;&#35201;&#27714;&#36739;&#39640;&#65292;&#21017;&#20248;&#20808;&#32771;&#34385;&#20351;&#29992;&#23450;&#28857;&#25968;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#23383;&#31526;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>char&#12289;varchar&#12289;binary&#12289;varbinary&#12289;enum&#12289;set&#12289;text&#12289;blob</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>char&#65306;&#22266;&#23450;&#38271;&#24230;&#30340;&#23383;&#31526;&#65292;&#20889;&#27861;&#20026;char(M)&#65292;&#26368;&#22823;&#38271;&#24230;&#19981;&#33021;&#36229;&#36807;M&#65292;&#20854;&#20013;M&#21487;&#20197;&#30465;&#30053;&#65292;&#40664;&#35748;&#20026;1</span></p>
+<p class=rvps2><span class=rvts4>varchar&#65306;&#21487;&#21464;&#38271;&#24230;&#30340;&#23383;&#31526;&#65292;&#20889;&#27861;&#20026;varchar(M)&#65292;&#26368;&#22823;&#38271;&#24230;&#19981;&#33021;&#36229;&#36807;M&#65292;&#20854;&#20013;M&#19981;&#21487;&#20197;&#30465;&#30053;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts6>&#19977;&#12289;&#26085;&#26399;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>year&#24180;</span></p>
+<p class=rvps2><span class=rvts4>date&#26085;&#26399;</span></p>
+<p class=rvps2><span class=rvts4>time&#26102;&#38388;</span></p>
+<p class=rvps2><span class=rvts4>datetime &#26085;&#26399;+&#26102;&#38388; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8 &nbsp; &nbsp; &nbsp;</span></p>
+<p class=rvps2><span class=rvts4>timestamp &#26085;&#26399;+&#26102;&#38388; &nbsp; &nbsp; &nbsp; &nbsp; 4 &nbsp; &#27604;&#36739;&#23481;&#26131;&#21463;&#26102;&#21306;&#12289;&#35821;&#27861;&#27169;&#24335;&#12289;&#29256;&#26412;&#30340;&#24433;&#21709;&#65292;&#26356;&#33021;&#21453;&#26144;&#24403;&#21069;&#26102;&#21306;&#30340;&#30495;&#23454;&#26102;&#38388;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#26465;&#20214;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#35821;&#27861;</span></p>
+<p class=rvps2><span class=rvts4>select &#26597;&#35810;&#21015;&#34920;</span></p>
+<p class=rvps2><span class=rvts4>from &#34920;&#21517;</span></p>
+<p class=rvps2><span class=rvts4>where &#31579;&#36873;&#26465;&#20214;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#31579;&#36873;&#26465;&#20214;&#30340;&#20998;&#31867;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#31616;&#21333;&#26465;&#20214;&#36816;&#31639;&#31526;</span></p>
+<p class=rvps2><span class=rvts4>&gt; &lt; = &lt;&gt; != &gt;= &lt;= &nbsp;&lt;=&gt;&#23433;&#20840;&#31561;&#20110;</span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#36923;&#36753;&#36816;&#31639;&#31526;</span></p>
+<p class=rvps2><span class=rvts4>&amp;&amp; and</span></p>
+<p class=rvps2><span class=rvts4>|| or</span></p>
+<p class=rvps2><span class=rvts4>! &nbsp;not</span></p>
+<p class=rvps2><span class=rvts4>3&#12289;&#27169;&#31946;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4>like:&#19968;&#33324;&#25645;&#37197;&#36890;&#37197;&#31526;&#20351;&#29992;&#65292;&#21487;&#20197;&#21028;&#26029;&#23383;&#31526;&#22411;&#25110;&#25968;&#20540;&#22411;</span></p>
+<p class=rvps2><span class=rvts4>&#36890;&#37197;&#31526;&#65306;%&#20219;&#24847;&#22810;&#20010;&#23383;&#31526;&#65292;_&#20219;&#24847;&#21333;&#20010;&#23383;&#31526;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>between and</span></p>
+<p class=rvps2><span class=rvts4>in</span></p>
+<p class=rvps2><span class=rvts4>is null /is not null&#65306;&#29992;&#20110;&#21028;&#26029;null&#20540;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts13>is null PK &lt;=&gt;</span></p>
+<p class=rvps2><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#26222;&#36890;&#31867;&#22411;&#30340;&#25968;&#20540;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>null&#20540;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#21487;&#35835;&#24615;</span></p>
+<p class=rvps2><span class=rvts13>is null</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#215;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#8730;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#8730;</span></p>
+<p class=rvps2><span class=rvts13>&lt;=&gt;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#8730;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#8730;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts13>&#215;</span></p>
+<p><span class=rvts13><br></span></p>
+<p><span class=rvts13><br></span></p>
+<p><span class=rvts13><br></span></p>
+<p class=rvps3><span class=rvts5>&#20462;&#25913;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#19968;&#12289;&#20462;&#25913;&#21333;&#34920;&#30340;&#35760;&#24405; &#9733;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;update &#34920;&#21517; set &#23383;&#27573;=&#20540;,&#23383;&#27573;=&#20540; &#12304;where &#31579;&#36873;&#26465;&#20214;&#12305;;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#20462;&#25913;&#22810;&#34920;&#30340;&#35760;&#24405;&#12304;&#34917;&#20805;&#12305;</span></p>
+<p class=rvps2><span class=rvts4>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>update &#34920;1 &#21035;&#21517; </span></p>
+<p class=rvps2><span class=rvts4>left|right|inner join &#34920;2 &#21035;&#21517; </span></p>
+<p class=rvps2><span class=rvts4>on &#36830;&#25509;&#26465;&#20214; &nbsp;</span></p>
+<p class=rvps2><span class=rvts4>set &#23383;&#27573;=&#20540;,&#23383;&#27573;=&#20540; </span></p>
+<p class=rvps2><span class=rvts4>&#12304;where &#31579;&#36873;&#26465;&#20214;&#12305;;</span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p><span class=rvts4><br></span></p>
+<p class=rvps3><span class=rvts5>&#24490;&#29615;&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts6>&#20301;&#32622;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#21482;&#33021;&#25918;&#22312;begin end&#20013;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#29305;&#28857;&#65306;&#37117;&#33021;&#23454;&#29616;&#24490;&#29615;&#32467;&#26500;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#23545;&#27604;&#65306;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#9312;&#36825;&#19977;&#31181;&#24490;&#29615;&#37117;&#21487;&#20197;&#30465;&#30053;&#21517;&#31216;&#65292;&#20294;&#22914;&#26524;&#24490;&#29615;&#20013;&#28155;&#21152;&#20102;&#24490;&#29615;&#25511;&#21046;&#35821;&#21477;&#65288;leave&#25110;iterate&#65289;&#21017;&#24517;&#39035;&#28155;&#21152;&#21517;&#31216;</span></p>
+<p class=rvps2><span class=rvts6>&#9313;</span></p>
+<p class=rvps2><span class=rvts6>loop &#19968;&#33324;&#29992;&#20110;&#23454;&#29616;&#31616;&#21333;&#30340;&#27515;&#24490;&#29615;</span></p>
+<p class=rvps2><span class=rvts6>while &#20808;&#21028;&#26029;&#21518;&#25191;&#34892;</span></p>
+<p class=rvps2><span class=rvts6>repeat &#20808;&#25191;&#34892;&#21518;&#21028;&#26029;&#65292;&#26080;&#26465;&#20214;&#33267;&#23569;&#25191;&#34892;&#19968;&#27425;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>1&#12289;while</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#12304;&#21517;&#31216;:&#12305;while &#24490;&#29615;&#26465;&#20214; do</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#24490;&#29615;&#20307;</span></p>
+<p class=rvps2><span class=rvts4>end while &#12304;&#21517;&#31216;&#12305;;</span></p>
+<p class=rvps2><span class=rvts6>2&#12289;loop</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts4>&#12304;&#21517;&#31216;&#65306;&#12305;loop</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#24490;&#29615;&#20307;</span></p>
+<p class=rvps2><span class=rvts4>end loop &#12304;&#21517;&#31216;&#12305;;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>3&#12289;repeat</span></p>
+<p class=rvps2><span class=rvts6>&#35821;&#27861;&#65306;</span></p>
+<p class=rvps2><span class=rvts6>&#12304;&#21517;&#31216;:&#12305;repeat</span></p>
+<p class=rvps2><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>&#24490;&#29615;&#20307;</span></p>
+<p class=rvps2><span class=rvts6>until &#32467;&#26463;&#26465;&#20214; </span></p>
+<p class=rvps2><span class=rvts6>end repeat &#12304;&#21517;&#31216;&#12305;;</span></p>
+<p class=rvps2><span class=rvts6><br></span></p>
+<p class=rvps2><span class=rvts6>&#20108;&#12289;&#24490;&#29615;&#25511;&#21046;&#35821;&#21477;</span></p>
+<p class=rvps2><span class=rvts6>leave&#65306;&#31867;&#20284;&#20110;break&#65292;&#29992;&#20110;&#36339;&#20986;&#25152;&#22312;&#30340;&#24490;&#29615;</span></p>
+<p class=rvps2><span class=rvts6>iterate&#65306;&#31867;&#20284;&#20110;continue&#65292;&#29992;&#20110;&#32467;&#26463;&#26412;&#27425;&#24490;&#29615;&#65292;&#32487;&#32493;&#19979;&#19968;&#27425;</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps3><span class=rvts5>&#19982;MySQL&#30340;&#31532;&#19968;&#27425;&#20146;&#23494;&#25509;&#35302;</span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p><span class=rvts5><br></span></p>
+<p class=rvps3><span class=rvts5>&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts5><br></span></p>
+<p class=rvps2><span class=rvts4>&#19968;&#12289;&#21547;&#20041;</span></p>
+<p class=rvps2><span class=rvts4>&#23884;&#22871;&#22312;&#20854;&#20182;&#35821;&#21477;&#20869;&#37096;&#30340;select&#35821;&#21477;&#31216;&#20026;&#23376;&#26597;&#35810;&#25110;&#20869;&#26597;&#35810;&#65292;</span></p>
+<p class=rvps2><span class=rvts4>&#22806;&#38754;&#30340;&#35821;&#21477;&#21487;&#20197;&#26159;insert&#12289;update&#12289;delete&#12289;</span><span class=rvts10>select</span><span class=rvts4>&#31561;&#65292;&#19968;&#33324;select&#20316;&#20026;&#22806;&#38754;&#35821;&#21477;&#36739;&#22810;</span></p>
+<p class=rvps2><span class=rvts4>&#22806;&#38754;&#22914;&#26524;&#20026;select&#35821;&#21477;&#65292;&#21017;&#27492;&#35821;&#21477;&#31216;&#20026;&#22806;&#26597;&#35810;&#25110;&#20027;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>&#20108;&#12289;&#20998;&#31867;</span></p>
+<p class=rvps2><span class=rvts4>1&#12289;&#25353;&#20986;&#29616;&#20301;&#32622;</span></p>
+<p class=rvps2><span class=rvts4>select&#21518;&#38754;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#20165;&#20165;&#25903;&#25345;&#26631;&#37327;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4>from&#21518;&#38754;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#34920;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts10>where&#25110;having&#21518;&#38754;&#65306;</span></p>
+<p class=rvps2><span class=rvts10> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts10> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts10>&#26631;&#37327;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts10> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts10> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts10>&#21015;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#34892;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4>exists&#21518;&#38754;&#65306;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#26631;&#37327;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#21015;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#34892;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts4>&#34920;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts4><br></span></p>
+<p class=rvps2><span class=rvts4>2&#12289;&#25353;&#32467;&#26524;&#38598;&#30340;&#34892;&#21015;</span></p>
+<p class=rvps2><span class=rvts10>&#26631;&#37327;&#23376;&#26597;&#35810;&#65288;&#21333;&#34892;&#23376;&#26597;&#35810;&#65289;&#65306;&#32467;&#26524;&#38598;&#20026;&#19968;&#34892;&#19968;&#21015;</span></p>
+<p class=rvps2><span class=rvts10>&#21015;&#23376;&#26597;&#35810;&#65288;&#22810;&#34892;&#23376;&#26597;&#35810;&#65289;&#65306;&#32467;&#26524;&#38598;&#20026;&#22810;&#34892;&#19968;&#21015;</span></p>
+<p class=rvps2><span class=rvts12>&#34892;&#23376;&#26597;&#35810;&#65306;&#32467;&#26524;&#38598;&#20026;&#22810;&#34892;&#22810;&#21015;</span></p>
+<p class=rvps2><span class=rvts12>&#34920;&#23376;&#26597;&#35810;&#65306;&#32467;&#26524;&#38598;&#20026;&#22810;&#34892;&#22810;&#21015;</span></p>
+<p class=rvps2><span class=rvts12><br></span></p>
+<p class=rvps2><span class=rvts12><br></span></p>
+<p class=rvps2><span class=rvts12>&#19977;&#12289;&#31034;&#20363;</span></p>
+<p class=rvps2><span class=rvts12>where&#25110;having&#21518;&#38754;</span></p>
+<p class=rvps2><span class=rvts12>1&#12289;&#26631;&#37327;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts12>&#26696;&#20363;&#65306;&#26597;&#35810;&#26368;&#20302;&#24037;&#36164;&#30340;&#21592;&#24037;&#22995;&#21517;&#21644;&#24037;&#36164;</span></p>
+<p class=rvps2><span class=rvts12>&#9312;&#26368;&#20302;&#24037;&#36164;</span></p>
+<p class=rvps2><span class=rvts12>select min(salary) from employees</span></p>
+<p class=rvps2><span class=rvts12><br></span></p>
+<p class=rvps2><span class=rvts12>&#9313;&#26597;&#35810;&#21592;&#24037;&#30340;&#22995;&#21517;&#21644;&#24037;&#36164;&#65292;&#35201;&#27714;&#24037;&#36164;=&#9312;</span></p>
+<p class=rvps2><span class=rvts12>select last_name,salary</span></p>
+<p class=rvps2><span class=rvts12>from employees</span></p>
+<p class=rvps2><span class=rvts12>where salary=(</span></p>
+<p class=rvps2><span class=rvts12> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts12>select min(salary) from employees</span></p>
+<p class=rvps2><span class=rvts12>);</span></p>
+<p class=rvps2><span class=rvts12><br></span></p>
+<p class=rvps2><span class=rvts12>2&#12289;&#21015;&#23376;&#26597;&#35810;</span></p>
+<p class=rvps2><span class=rvts12>&#26696;&#20363;&#65306;&#26597;&#35810;&#25152;&#26377;&#26159;&#39046;&#23548;&#30340;&#21592;&#24037;&#22995;&#21517;</span></p>
+<p class=rvps2><span class=rvts12>&#9312;&#26597;&#35810;&#25152;&#26377;&#21592;&#24037;&#30340; manager_id</span></p>
+<p class=rvps2><span class=rvts12>select manager_id</span></p>
+<p class=rvps2><span class=rvts12>from employees</span></p>
+<p class=rvps2><span class=rvts12><br></span></p>
+<p class=rvps2><span class=rvts12>&#9313;&#26597;&#35810;&#22995;&#21517;&#65292;employee_id&#23646;&#20110;&#9312;&#21015;&#34920;&#30340;&#19968;&#20010;</span></p>
+<p class=rvps2><span class=rvts12>select last_name</span></p>
+<p class=rvps2><span class=rvts12>from employees</span></p>
+<p class=rvps2><span class=rvts12>where employee_id in(</span></p>
+<p class=rvps2><span class=rvts12> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts12>select manager_id</span></p>
+<p class=rvps2><span class=rvts12> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts12>from employees</span></p>
+<p class=rvps2><span class=rvts12>);</span></p>
+</body></html>
